@@ -21,7 +21,7 @@ input[name="searchQuery"]
     }
 }
 
-button{
+button[type="submit"]{
     padding: 5px 10px;
     border: none;
     border-radius: 2px;

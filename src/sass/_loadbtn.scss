@@ -1,0 +1,29 @@
+.btn-load
+{
+    display: flex;
+    justify-content: center;
+}
+
+.load-more{
+    color: rgba(0, 0, 0, 0.55);;
+    text-align: center;
+    background-color: #69bdd6;
+    border: none;
+    border-radius: 2px;
+    margin: 0;
+    padding: 10px 10px;
+    font-size: 13px;
+    display: block;
+    cursor: pointer;
+    transition: color 0.25s linear;
+
+    &:hover {
+            color: rgba(0, 0, 0, 0.75);
+        }
+}
+
+.load-more.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
