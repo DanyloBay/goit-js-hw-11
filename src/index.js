@@ -62,8 +62,8 @@ const fetchPhotosMap = async () => {
     notifyTotalHits(response);
     notifyEndImagesHits(response);
     loadMoreBtnAppears(response);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 };
 
