@@ -10,7 +10,7 @@ const createSearchMarkup = ({
   downloads,
 }) => {
   const cardMarkup = `<div class="photo-card">
-            <a class="gallery__item" href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
+            <a class="photo-card__image" href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
             <div class="info">
               <p class="info-item">
                 <b>Likes</b>

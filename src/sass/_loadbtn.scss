@@ -2,10 +2,11 @@
 {
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 
 .load-more{
-    color: rgba(0, 0, 0, 0.55);;
+    color: rgba(0, 0, 0, 0.75);;
     text-align: center;
     background-color: #69bdd6;
     border: none;
@@ -15,10 +16,11 @@
     font-size: 13px;
     display: block;
     cursor: pointer;
-    transition: color 0.25s linear;
+    transition: color 0.25s linear, box-shadow 0.25s linear;
 
     &:hover {
-            color: rgba(0, 0, 0, 0.75);
+        color: rgba(0, 0, 0, 0.55);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
         }
 }
 
