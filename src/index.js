@@ -27,7 +27,7 @@ const onSearchForm = async e => {
     loadBtnRemoveHidden();
     notifyNotImages(hits);
     notifyTotalHits(totalHits);
-    notifyEndImagesHits(currentPageHits, totalHits);
+    notEnaughtSearchResult(totalHits);
   } catch (error) {
     console.log(error);
   }
@@ -82,6 +82,12 @@ const notifyEndImagesHits = (currentPageHits, totalHits) => {
     );
     loadBtnHidden();
     return;
+  }
+};
+
+const notEnaughtSearchResult = totalHits => {
+  if (totalHits < 40) {
+    loadBtnHidden();
   }
 };
 
