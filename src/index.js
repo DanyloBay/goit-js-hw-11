@@ -27,6 +27,7 @@ const onSearchForm = async e => {
     loadBtnRemoveHidden();
     notifyNotImages(hits);
     notifyTotalHits(totalHits);
+    notifyEndImagesHits(currentPageHits, totalHits);
   } catch (error) {
     console.log(error);
   }
@@ -75,7 +76,7 @@ const notifyTotalHits = totalHits => {
 };
 
 const notifyEndImagesHits = (currentPageHits, totalHits) => {
-  if (currentPageHits >= totalHits) {
+  if (currentPageHits >= totalHits || totalHits < 40) {
     Notiflix.Notify.info(
       "We're sorry, but you've reached the end of search results."
     );
