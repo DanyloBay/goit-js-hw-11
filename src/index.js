@@ -27,6 +27,7 @@ const onSearchForm = async e => {
     loadBtnRemoveHidden();
     notifyNotImages(hits);
     notifyTotalHits(totalHits);
+    notifyEndImagesHits(currentPageHits, totalHits);
   } catch (error) {
     console.log(error);
   }

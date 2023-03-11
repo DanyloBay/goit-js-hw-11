@@ -1,82 +1,37 @@
 .gallery {
-  @media screen and (min-width: 320px){
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  @media screen and (min-width: 680px) {
-    flex-direction: row;
-    height: 200px;
-  }
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
 }
 
 .photo-card {
-  @media screen and (min-width: 680px) {
-    width: calc(33.3% - 15px);
-  }
-    
-  @media screen and (min-width: 1200px) {
-    width: calc(25% - 15px);
-  }
-}
-
-.photo-card__image {
-  @media screen and (min-width: 320px) {
-    overflow: hidden;
-    display: block;
-  }
+  width: calc(25% - 15px);
 }
 
 .photo-card__image img {
-  @media screen and (min-width: 320px) {
-    display: block;
-    width: 100%;
-    transition: transform 0.5s;
-  }
-
-  @media screen and (min-width: 680px) {
-    height: 250px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    height: 200px;
-  } 
-}
-
-.photo-card__image:hover img {
-  @media screen and (min-width: 320px) {
-    transform: scale(1.1);
-  }
+  display: block;
+  width: 100%;
+  height: 200px;
 }
 
 .info {
-  @media screen and (min-width: 320px) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0 10px;
+  background-color: #69bdd6;
+  color: #0000008c;
+
+  &-item {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 10px;
-    background-color: #69bdd6;
-    color: #0000008c;
-
-    &-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 13px;
-      margin: 15px 0;
-    }
-  }
-  @media screen and (min-width: 680px) {
-    gap: 5px;
-    &-item {
-        font-size: 15px;
-      }
-  }
-
-  @media screen and (min-width: 1200px) {
-    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin: 15px 0;
   }
 }
