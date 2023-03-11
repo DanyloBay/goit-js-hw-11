@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default class NewsApiService {
   _BASE_URL = 'https://pixabay.com/api/';
   _API_KEY = '34198243-210bab7eda00f7845d389eb7b';
@@ -8,15 +10,11 @@ export default class NewsApiService {
   }
 
   async fetchPhotos() {
-    try {
-      const response = await fetch(
-        `${this._BASE_URL}?key=${this._API_KEY}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=40`
-      );
-      this.incrementPage();
-      return await response.json();
-    } catch (error) {
-      console.log(error);
-    }
+    const { data } = await axios(
+      `${this._BASE_URL}?key=${this._API_KEY}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=40`
+    );
+    this.incrementPage();
+    return data;
   }
 
   incrementPage() {

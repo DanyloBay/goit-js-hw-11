@@ -1,31 +1,31 @@
-.btn-load
-{
+@media screen and (min-width: 320px) {
+ 
+.btn-load {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
 }
 
-.load-more{
-    color: rgba(0, 0, 0, 0.75);;
-    text-align: center;
+.load-more {
+    color: rgba(0, 0, 0, 0.75);
     background-color: #69bdd6;
     border: none;
     border-radius: 2px;
-    margin: 0;
     padding: 10px 10px;
     font-size: 13px;
-    display: block;
     cursor: pointer;
     transition: color 0.25s linear, box-shadow 0.25s linear;
 
     &:hover {
         color: rgba(0, 0, 0, 0.55);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        }
+    }
 }
 
-.load-more.is-hidden{
+.load-more.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+
 }
